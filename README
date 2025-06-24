@@ -1,0 +1,79 @@
+# Titanic Dataset - Exploratory Data Analysis (EDA)
+
+## Objective
+
+The goal of this task is to perform Exploratory Data Analysis (EDA) on the Titanic dataset to uncover patterns, trends, correlations, and distributions in the data using Python libraries.
+
+---
+
+## Tools Used
+
+- Python 3.11
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+---
+
+## Dataset
+
+The dataset used is the Titanic dataset from Kaggle:
+- [Kaggle Titanic Dataset](https://www.kaggle.com/datasets/yasserh/titanic-dataset)
+- Loaded using `archive.zip` in the code.
+
+---
+
+## Steps Performed
+
+1. **Import Libraries**: Loaded all required libraries for data analysis and visualization.
+2. **Read Dataset**: Extracted the Titanic dataset from `archive.zip` and loaded into a pandas DataFrame.
+3. **Initial Exploration**:
+   - Displayed first few rows
+   - Checked dataset structure using `.info()`
+   - Counted missing values
+   - Generated descriptive statistics
+4. **Data Cleaning**:
+   - Filled missing `Age` values with median
+   - Filled missing `Embarked` values with mode
+   - Dropped unnecessary columns like `Cabin`, `Ticket`, `Name`, and `PassengerId`
+5. **Encoding**:
+   - Converted `Sex` column to numerical (0 for male, 1 for female)
+   - Applied one-hot encoding on `Embarked` with `pd.get_dummies()`
+6. **Visualizations**:
+   - Histograms for numeric feature distribution
+   - Boxplots for `Age` vs `Survived` and `Fare` vs `Pclass`
+   - Correlation matrix using heatmap
+   - Pairplot of selected features (`Survived`, `Age`, `Pclass`, `Fare`)
+7. **Skewness Analysis**:
+   - Calculated skewness of numerical features
+   - Visualized skewed distribution (e.g., `Fare`)
+
+---
+
+## Key Visual Outputs
+
+- Histograms of all numeric features
+- Boxplots comparing age and fare by survival/class
+- Correlation heatmap between numeric features
+- Pairplot for feature relationship visualization
+- Histogram for detecting skewness
+
+---
+
+##  Insights
+
+- `Sex`, `Pclass`, and `Fare` have strong correlation with survival
+- The `Fare` distribution is heavily skewed
+- Many passengers have missing age values that needed imputation
+- Females had higher survival rate than males
+
+---
+
+## Files Included
+
+- `code.py`: Python script containing full EDA code
+- `archive.zip`: Titanic dataset
+- `README.md`: Project overview and documentation
+
+---
